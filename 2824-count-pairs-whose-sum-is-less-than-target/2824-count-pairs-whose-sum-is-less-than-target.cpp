@@ -1,7 +1,6 @@
 class Solution {
 public:
     int countPairs(vector<int>& nums, int target) {
-        sort(nums.begin(), nums.end());
         int count=0;
         for(int i=0; i<nums.size(); i++)
         {

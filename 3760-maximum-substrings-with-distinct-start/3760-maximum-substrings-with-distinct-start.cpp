@@ -1,13 +1,12 @@
 class Solution {
 public:
     int maxDistinct(string s) {
-        string a;int count=0;
-        for(char c: s)
-        {
-            if(a.find(c)==string::npos)
-            {
+        vector<bool> vis(256, false);
+        int count = 0;
+        for(char c : s) {
+            if(!vis[c]) {
                 count++;
-                a.push_back(c);
+                vis[c] = true;
             }
         }
         return count;
